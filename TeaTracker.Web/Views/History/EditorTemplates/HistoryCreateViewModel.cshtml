@@ -1,0 +1,50 @@
+﻿@using TeaTracker.Models.History;
+@using TeaTracker.Common.Enums;
+@using UnitsNet.Units;
+@using TeaTracker.Core.Extensions;
+
+@model HistoryCreateViewModel
+
+
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="CupSize" class="control-label"></label>
+                <input asp-for="CupSize" class="form-control" />
+                <span asp-validation-for="CupSize" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="VolumeUnit" class="control-label"></label>
+                <select asp-for="VolumeUnit" class="form-control" asp-items="@Html.GetEnumList<VolumeUnit>()"></select>
+                <span asp-validation-for="VolumeUnit" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="DrinkType" class="control-label"></label>
+                <select asp-for="DrinkType" class="form-control" asp-items="@Html.GetEnumList<DrinkTypeEnum>()"></select>
+                <span asp-validation-for="DrinkType" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="DrinkTime" class="control-label"></label>
+                <input asp-for="DrinkTime" class="form-control datepicker" data-date-format="dd/mm/yyyy" />
+                <span asp-validation-for="DrinkTime" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="col-md-2">
+            <div class="form-group">
+                <a class="btn btn-outline-dark" asp-action="Index">Cancel</a>
+                <input type="submit" value="Create" class="btn btn-outline-success" />
+            </div>
+        </div>
+    </div>

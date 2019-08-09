@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<form asp-action="Create">
+    @Html.EditorFor(x => x)
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+        });
+    </script>
+}

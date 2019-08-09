@@ -1,0 +1,24 @@
+﻿@using TeaTracker.Models.History;
+@using TeaTracker.Common.Enums;
+@using TeaTracker.Core.Extensions;
+
+@model HistoryCreateViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+    <form asp-action="Create">
+        @Html.EditorFor(x => x)
+    </form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+        });
+    </script>
+}

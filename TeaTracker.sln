@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29123.89
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeaTracker.Core", "TeaTracker.Core\TeaTracker.Core.csproj", "{28EA6D09-70BF-4245-9411-CAF2980C1515}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeaTracker.Data", "TeaTracker.Data\TeaTracker.Data.csproj", "{7FC47475-FAD1-4EEB-8877-6FD93067CA47}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeaTracker.Common", "TeaTracker.Common\TeaTracker.Common.csproj", "{226952CD-C961-45F5-9B41-2F74F627CCA0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeaTracker.Web", "TeaTracker.Web\TeaTracker.Web.csproj", "{FAB4C42A-C794-4357-8CA9-E6CE3C183B66}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{28EA6D09-70BF-4245-9411-CAF2980C1515}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28EA6D09-70BF-4245-9411-CAF2980C1515}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28EA6D09-70BF-4245-9411-CAF2980C1515}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28EA6D09-70BF-4245-9411-CAF2980C1515}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FC47475-FAD1-4EEB-8877-6FD93067CA47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FC47475-FAD1-4EEB-8877-6FD93067CA47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FC47475-FAD1-4EEB-8877-6FD93067CA47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FC47475-FAD1-4EEB-8877-6FD93067CA47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{226952CD-C961-45F5-9B41-2F74F627CCA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{226952CD-C961-45F5-9B41-2F74F627CCA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{226952CD-C961-45F5-9B41-2F74F627CCA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{226952CD-C961-45F5-9B41-2F74F627CCA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAB4C42A-C794-4357-8CA9-E6CE3C183B66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAB4C42A-C794-4357-8CA9-E6CE3C183B66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAB4C42A-C794-4357-8CA9-E6CE3C183B66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAB4C42A-C794-4357-8CA9-E6CE3C183B66}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FF72FABF-F4B1-4BC0-A626-F3CBF5EBA8CB}
+	EndGlobalSection
+EndGlobal

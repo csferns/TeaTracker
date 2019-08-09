@@ -1,0 +1,83 @@
+﻿@using UnitsNet;
+@using TeaTracker.Models.History;
+@using TeaTracker.Core.Extensions;
+
+@model IndexViewModel
+
+@{
+    ViewData["Title"] = "History";
+}
+
+<div class="row pb-2">
+    <div class="col-md-10">
+
+    </div>
+    <div class="col-md-12">
+        <a class="btn btn-outline-success" asp-action="Create" asp-controller="History">Create</a>
+
+        @if (Model.TargetDate.HasValue)
+        {
+            <div class="pull-right">
+                <h3>Date: @Model.TargetDate.Value.ToShortDateString()</h3>
+            </div>
+        }
+
+    </div>
+</div>
+
+<div class="row p-3">
+    <div class="col-md-12 border border-primary rounded p-3">
+        <div class="row">
+            <div class="col-md-6">
+                <p>Reccomended Fluid Intake: @Model.ReccomendedFluidIntake @Model.MeasurementUnit.GetEnumDescription()</p>
+                <p>Actual Fluid Intake: @Model.ActualFluidIntake @Model.MeasurementUnit.GetEnumDescription()</p>
+            </div>
+            <div class="col-md-6">
+                <p>Fluid Intake Difference: @Model.FluidIntakeDifference @Model.MeasurementUnit.GetEnumDescription()</p>
+                <p>Percentage of reccomended: @Model.FluidIntakePercentage %</p>
+            </div>
+        </div>
+    </div>
+
+    <hr />
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        @if (Model.Histories.Any())
+        {
+            <table class="table table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Drink Time</th>
+                        <th scope="col">Cup Size</th>
+                        <th scope="col">Drink Type</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var item in Model.Histories)
+                    {
+                        Volume measurement = item.GetMeasurement;
+                        <tr>
+                            <td>@item.DrinkTime.ToString("dd/MM/yyyy hh:mm:ss")</td>
+                            <td>@measurement.Value @measurement.Unit</td>
+                            <td>@item.DrinkType.GetEnumDescription()</td>
+                            <td>
+                                <a class="btn btn-block btn-outline-secondary pull-right" href="@Url.Action("Edit", "History", new { id = item.HistoryId })">Edit</a>
+                                <a class="btn btn-block btn-outline-danger pull-right" href="@Url.Action("Delete", "History", new { id = item.HistoryId })">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <div class="alert alert-warning">
+                No records for today
+            </div>
+        }
+    </div>
+</div>
